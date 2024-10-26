@@ -67,7 +67,7 @@ end)
 This function would trigger a QTE in which player would have to hold **E** and **G** simultaneously in the time limit of 10 seconds (10000 miliseconds). Whether if player succeded in the QTE, the callback would be either false or true.
 ## Testing
 
-If you would like to test these QTE's you can use test commands that are located in 'client.lua' starting on line 82.
+If you would like to test these QTE's you can use test commands that are located in `client.lua` starting on line 82.
 
 ## Video showcase
 - [Youtube Video](https://www.youtube.com/watch?v=upUx6IsQC44)
