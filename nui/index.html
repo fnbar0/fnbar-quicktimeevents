@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>QuickTimeEvents</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="TapQTE">
+        <div id="key-container">
+            <div id="glow"></div>
+            <div id="key"></div>
+            <div id="circle-wrapper">
+                <div id="circleTap"></div>
+            </div>
+        </div>
+    </div>
+    <div id="HoldQTE">
+        <div id = "progressbar">
+            <div id = "outer">
+                <div id = "inner">
+                    <div id="holdKey">1</div>
+                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+                        <defs>
+                        <linearGradient id="GradientColor">
+                        <stop offset="0%" stop-color="#0096FF" />
+                        <stop offset="100%" stop-color="#6495ED" />
+                        </linearGradient>
+                        </defs>
+                        <circle cx="80" cy="80" r="70" stroke-linecap="round"/> 
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="DoubleKeyQTE">
+        <div id="key-container" class="key-container">
+            <div class="firstKeyGlow"></div>
+            <div id="key" class="firstDoubleKey">E</div>
+        </div>
+        <div class="plus">+</div>
+        <div id="key-container" class="key-container">
+            <div class="secondKeyGlow"></div>
+            <div id="key" class="secondDoubleKey">E</div>
+        </div>
+    </div>
+<script src="script.js"></script>
+</body>
+</html>

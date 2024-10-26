@@ -1,0 +1,211 @@
+body {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150vh;
+}
+
+/* TAP QTE */
+
+#TapQTE {
+    position: relative;
+    display: none; 
+}
+
+#key-container {
+    position: relative;
+    width: 100px;
+    height: 100px;
+}
+
+#glow {
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    width: 150px; 
+    height: 150px; 
+    background-color: rgba(0, 255, 0, 0.973); 
+    filter: blur(30px); 
+    border-radius: 50%; 
+    z-index: -1; 
+    opacity: 0; 
+    transform: translate(-50%, -50%);
+}
+
+#key {
+    font-size: 70px;
+    font-family: "Rubik", sans-serif;
+    color: white;
+    text-align: center;
+    line-height: 100px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+}
+
+#circle-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#circleTap {
+    width: 150px;
+    height: 150px;
+    border: 2px solid white;
+    border-radius: 50%;
+    animation: pulse 0.5s infinite;
+    display: none; 
+    transition: opacity 0.3s ease;
+
+}
+
+
+/* HOLD QTE */
+
+#HoldQTE {
+    display:none;
+}
+
+#holdKey {
+    
+    font-family: "Rubik", sans-serif;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-size:40px;
+}
+
+#outer {
+    height: 160px;
+    width: 160px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2), 0px 0px 10px rgba(255, 255, 255, 1.0);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255,255,255,0.9); 
+}
+
+#inner {
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    box-shadow: 
+    inset 0px 4px 10px rgba(0, 0, 0, 0.2), 0px 0px 10px rgba(255, 255, 255, 1.0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+circle {
+    fill:none;
+    stroke:url(#GradientColor);
+    stroke-width:20px;
+    stroke-dasharray: 450;
+    stroke-dashoffset: 450;
+    transition: stroke-dashoffset 0.1s ease;
+}
+
+svg{
+    position: absolute;
+}
+
+stop {
+    transition: stop-color 0.5s ease-in-out;
+}
+
+/* DOUBLE KEY QTE */
+
+#DoubleKeyQTE {
+    align-items: center; 
+    display: none;
+}
+
+.key-container, .plus {
+  display: inline-block;
+  margin: 0 5px
+}
+
+.plus {
+    font-size: 70px;
+    font-family: "Rubik", sans-serif;
+    color: white;
+    text-align: center;
+    line-height: 100px;
+}
+
+.key-container {
+    position: relative; 
+}
+
+.firstKeyGlow {
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    width: 150px; 
+    height: 150px; 
+    background-color: rgba(0, 255, 0, 0.973); 
+    filter: blur(30px); 
+    border-radius: 50%; 
+    z-index: -1; 
+    opacity: 0; 
+    transition: opacity 0.3s ease;
+}
+
+.secondKeyGlow {
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    width: 150px; 
+    height: 150px; 
+    background-color: rgba(0, 255, 0, 0.973); 
+    filter: blur(30px); 
+    border-radius: 50%; 
+    z-index: -1; 
+    opacity: 0; 
+    transition: opacity 0.3s ease;
+}
+
+
+/* ANIMATIONS */
+
+.fadeOut {
+    animation: fadeOut 1s forwards;
+}
+
+.fadeIn {
+    animation: fadeIn 0.5s forwards;
+}
+
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
