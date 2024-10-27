@@ -246,5 +246,5 @@ function hideElementWithAnimation(element) {
 }
 
 function postResult(resultType, success) {
-    $.post(`https://fnbar-quicktimeevents/${resultType}`, JSON.stringify({ success }));
+    $.post(`https://${GetParentResourceName()}/${resultType}`, JSON.stringify({ success }));
 }
